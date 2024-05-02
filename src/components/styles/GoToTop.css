@@ -1,0 +1,30 @@
+.goToTop--btn {
+  font-size: 1.7rem;
+  width: 4rem;
+  height: 4rem;
+  color: #fff;
+  background-color: #29335c;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  .goToTop--btnIcon {
+    animation: goToTop 0.7s linear infinite alternate-reverse;
+  }
+}
+
+
+@keyframes goToTop {
+  0% {
+    transform: translateY(-0.2rem);
+  }
+  100% {
+    transform: translateY(0.2rem);
+  }
+}

@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&family=Roboto:wght@400;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --primary-100: #86efac;
+  --primary-200: #f0fdf5;
+  --primary-300: #19725d;
+  --accent-100: #f5be0b;
+  --accent-200: #fef1c7;
+  --text-100: #292524;
+  --text-200: #78716c;
+  --bg-100: #fafaf9;
+  --bg-200: #f5f5f4;
+  --bg-300: #e0e2e5;
+  --primary-alpha-100: #86efac80;
+  --nav-menu: #bff5d1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
