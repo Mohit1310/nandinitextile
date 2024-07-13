@@ -11,10 +11,6 @@
   padding: 0 7rem;
 }
 
-.navLogo {
-  margin-top: 10px;
-}
-
 .nav-menu {
   display: flex;
   list-style: none;

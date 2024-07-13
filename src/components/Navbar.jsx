@@ -2,7 +2,8 @@ import "./styles/Navbar.css";
 import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Logo from "../svg/logo";
+// import Logo from "../svg/logo";
+import Logo from "../img/logo.png";
 
 const Navbar = () => {
   const [Mobile, setMobile] = useState(false);
@@ -40,7 +41,8 @@ const Navbar = () => {
   return (
     <nav className="navBar" style={{ top: `${navbarTop}px` }}>
       <div className="navLogo">
-        <Logo />
+        {/* <Logo /> */}
+        <img src={Logo} alt="logo" width={100} />
       </div>
       <div onClick={toggleMobileMenu} className="menu-icons">
         {Mobile ? (

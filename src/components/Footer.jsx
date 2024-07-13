@@ -7,7 +7,8 @@ import { useForm } from "@formspree/react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./styles/Footer.css";
-import Logo from "../svg/logo";
+// import Logo from "../svg/logo";
+import Logo from "../img/logo.png";
 
 const Footer = () => {
   const [name, setName] = useState("");
@@ -57,7 +58,8 @@ const Footer = () => {
       <ToastContainer autoClose={2500} />
       <footer className="footer-container">
         <div className="column logo">
-          <Logo />
+          {/* <Logo /> */}
+          <img src={Logo} alt="logo" width={100} />
         </div>
         <div className="column contact">
           <div className="location">
@@ -92,7 +94,7 @@ const Footer = () => {
             </li>
             <li className="list-item">
               <a href="#contactUs" className="nav-links">
-                Contact Us
+                Contact us
               </a>
             </li>
           </ul>

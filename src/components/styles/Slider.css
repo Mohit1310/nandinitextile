@@ -1,17 +1,12 @@
 .sliderImg img {
   -webkit-user-drag: none;
   width: 100vw;
-  height: 45vh;
+  height: 50vh;
   object-fit: cover;
-  cursor: grab;
-}
-
-.sliderImg img:active {
-  cursor: grabbing;
 }
 
 @media screen and (max-width: 767px) {
   .sliderImg img {
-    height: 25vh;
+    height: 30vh;
   }
 }

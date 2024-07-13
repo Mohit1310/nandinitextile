@@ -1,17 +1,22 @@
 import React from "react";
 import "./styles/ProductSection.css";
 
-const ProductItem = ({ name, image, availableGSM, availableSize, availableColors }) => {
-
+const ProductItem = ({
+  name,
+  image,
+  availableGSM,
+  availableSize,
+  availableColors,
+}) => {
   return (
     <div className="productItem">
       <div className="productItem--front">
         <img src={image} alt={name} />
         <div className="productItem--footer">
-          <h2 style={{padding: "0rem"}}>{name}</h2>
+          <h2>{name}</h2>
         </div>
       </div>
-      <div className="productItem--back">
+      {/* <div className="productItem--back">
         <div className="productItem--backHeader">
           <p>{name}</p>
         </div>
@@ -29,7 +34,7 @@ const ProductItem = ({ name, image, availableGSM, availableSize, availableColors
             {availableSize}
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

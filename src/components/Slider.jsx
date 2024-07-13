@@ -43,7 +43,7 @@ const Slider = () => {
         {sliderDetail.map((value, index) => {
           return (
             <div className="sliderImg" key={index}>
-              <img src={value.image} alt="" />
+              <img src={value.image} alt="slider image" />
             </div>
           );
         })}
