@@ -1,20 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { CiLocationOn } from "react-icons/ci";
-import { AiOutlineMail } from "react-icons/ai";
-// import { Logo } from "../../public/nandini-logo-1.png";
-import { Link } from "react-router-dom";
-import { useForm } from "@formspree/react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import "./styles/Footer.css";
-// import Logo from "../svg/logo";
-import Logo from "../img/logo.png";
+import React, { useState, useEffect } from 'react';
+import { CiLocationOn } from 'react-icons/ci';
+import { CiMail } from 'react-icons/ci';
+import { Link } from 'react-router-dom';
+import { useForm } from '@formspree/react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import './styles/Footer.css';
+import Logo from '../img/logo.png';
 
 const Footer = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [description, setDescription] = useState("");
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [description, setDescription] = useState('');
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -40,16 +38,16 @@ const Footer = () => {
   //   }));
   // };
   const [showSuccessToast, setShowSuccessToast] = useState(false);
-  const [state, handleSubmit] = useForm("xnqkpjgl");
+  const [state, handleSubmit] = useForm('xnqkpjgl');
 
   useEffect(() => {
     if (state.succeeded && !showSuccessToast) {
-      toast.success("Thanks for contacting!");
+      toast.success('Thanks for contacting!');
       setShowSuccessToast(true);
-      setName("");
-      setEmail("");
-      setSubject("");
-      setDescription("");
+      setName('');
+      setEmail('');
+      setSubject('');
+      setDescription('');
     }
   }, [state.succeeded, showSuccessToast]);
 
@@ -61,16 +59,16 @@ const Footer = () => {
           {/* <Logo /> */}
           <img src={Logo} alt="logo" width={100} />
         </div>
-        <div className="column contact">
+        <div className="contact">
           <div className="location">
-            <CiLocationOn />
+            <CiLocationOn fontSize={36} className="locationIcon" />
             <span>
               703, B-wing, Haripadam Residency, opp. Mahesh Nagar, Samrath
-              Chowk, <br /> Solapur - 413 002, Maharashtra (INDIA)
+              Chowk, Solapur - 413 002, Maharashtra (India)
             </span>
           </div>
           <div className="email">
-            <AiOutlineMail />
+            <CiMail fontSize={20} />
             <span>nandinitextile@gmail.com</span>
           </div>
         </div>
@@ -83,18 +81,18 @@ const Footer = () => {
               </Link>
             </li>
             <li className="list-item">
-              <a href="#products" className="nav-links">
+              <Link to="/products" className="nav-links">
                 Products
-              </a>
+              </Link>
             </li>
             <li className="list-item">
-              <a href="#aboutUs" className="nav-links">
-                About Us
-              </a>
+              <Link to="/about" className="nav-links">
+                About
+              </Link>
             </li>
             <li className="list-item">
-              <a href="#contactUs" className="nav-links">
-                Contact us
+              <a href="#footer" className="nav-links">
+                Contact
               </a>
             </li>
           </ul>
@@ -138,7 +136,7 @@ const Footer = () => {
                 placeholder="Description"
                 name="Description"
                 rows={5}
-                style={{ resize: "none" }}
+                style={{ resize: 'none' }}
                 required
                 autoComplete="off"
                 value={description}
@@ -149,9 +147,9 @@ const Footer = () => {
           </form>
         </div>
       </footer>
-      <div className="copyright">
-        <p>&copy; 2023 All rights reserved</p>
-      </div>
+      {/* <div className="copyright">
+        <p>&copy; 2024 All rights reserved</p>
+      </div> */}
     </div>
   );
 };

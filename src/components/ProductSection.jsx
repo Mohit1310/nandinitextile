@@ -1,7 +1,6 @@
-import React from "react";
-import ProductItem from "./ProductItem";
-import "./styles/ProductSection.css";
-import { Link } from "react-router-dom";
+import React from 'react';
+import ProductItem from './ProductItem';
+import './styles/ProductSection.css';
 
 const ProductSection = ({ cards }) => {
   return (
@@ -11,18 +10,14 @@ const ProductSection = ({ cards }) => {
       </div>
       <div className="productSection">
         {cards.map((card, index) => (
-          <Link to={"/product/" + card.url}>
-            <div>
-              <ProductItem
-                key={index}
-                name={card.name}
-                image={card.image}
-                availableGSM={card.availableGSM}
-                availableSize={card.availableSize}
-                availableColors={card.availableColors}
-              />
-            </div>
-          </Link>
+          <ProductItem
+            key={index}
+            name={card.name}
+            image={card.image}
+            availableGSM={card.availableGSM}
+            availableSize={card.availableSize}
+            availableColors={card.availableColors}
+          />
         ))}
       </div>
     </div>

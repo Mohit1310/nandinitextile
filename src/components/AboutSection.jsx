@@ -1,14 +1,16 @@
-import React from "react";
-import "./styles/AboutSection.css";
-import AboutUs from "../img/aboutUs.png";
+import React from 'react';
+import './styles/AboutSection.css';
+import AboutUs from '../img/aboutUs.png';
+import { Link, useLocation } from 'react-router-dom';
+import Ecoterry from '../img/how_ecoterry_is_made.mp4';
 
 const AboutSection = () => {
+  const location = useLocation();
+
   return (
     <div className="aboutSection" id="aboutUs">
       <div className="aboutContent">
-        {/* <div className="aboutImg"> */}
         <img src={AboutUs} alt="Towel" />
-        {/* </div> */}
         <div className="aboutWriting">
           <h1>About us</h1>
           <p>
@@ -25,8 +27,19 @@ const AboutSection = () => {
             luxury and reliability of Nandini Textiles' towels, the perfect
             blend of comfort and functionality.
           </p>
-          {/* <button>Read More</button> */}
+          {location.pathname === '/' && (
+            <Link to="/about">
+              <button>See More</button>
+            </Link>
+          )}
         </div>
+      </div>
+      <div className="iframe">
+        {location.pathname === '/about' && (
+          <video src={Ecoterry} controls>
+            Your browser does not support the video tag.
+          </video>
+        )}
       </div>
     </div>
   );

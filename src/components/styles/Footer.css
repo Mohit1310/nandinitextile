@@ -3,14 +3,6 @@
   color: black;
 }
 
-/* .triangle {
-  width: 0;
-  height: 0;
-  border-right: 98vw solid transparent;
-  border-top: 70px solid var(--primary-300);
-  position: relative;
-} */
-
 .footer-container {
   display: flex;
   justify-content: space-between;
@@ -101,7 +93,7 @@ button {
 
 @media screen and (max-width: 768px) {
   .footer-container {
-    margin: 0 1rem;
+    margin: 0 1.7rem;
     flex-direction: column;
   }
   .form {
@@ -133,5 +125,8 @@ button {
   }
   .copyright {
     padding: 1rem 2rem;
+  }
+  .locationIcon {
+    width: 50px;
   }
 }

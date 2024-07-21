@@ -1,9 +1,8 @@
-import "./styles/Navbar.css";
-import { useEffect, useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
-// import Logo from "../svg/logo";
-import Logo from "../img/logo.png";
+import './styles/Navbar.css';
+import { useEffect, useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import Logo from '../img/logo.png';
 
 const Navbar = () => {
   const [Mobile, setMobile] = useState(false);
@@ -24,9 +23,9 @@ const Navbar = () => {
       setPrevScrollPos(currentScrollPos);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, [prevScrollPos]);
 
@@ -40,10 +39,9 @@ const Navbar = () => {
 
   return (
     <nav className="navBar" style={{ top: `${navbarTop}px` }}>
-      <div className="navLogo">
-        {/* <Logo /> */}
+      <Link to="/" className="navLogo">
         <img src={Logo} alt="logo" width={100} />
-      </div>
+      </Link>
       <div onClick={toggleMobileMenu} className="menu-icons">
         {Mobile ? (
           <FaTimes className="menu-icon" />
@@ -52,20 +50,20 @@ const Navbar = () => {
         )}
       </div>
       <ul
-        className={Mobile ? "nav-menu active" : "nav-menu"}
+        className={Mobile ? 'nav-menu active' : 'nav-menu'}
         onClick={closeMobileMenu}
       >
         <li>
           <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="#products">Products</a>
+          <Link to="/products">Products</Link>
         </li>
         <li>
-          <a href="#aboutUs">About Us</a>
+          <Link to="/about">About</Link>
         </li>
         <li>
-          <a href="#footer">Contact Us</a>
+          <a href="#footer">Contact</a>
         </li>
       </ul>
     </nav>

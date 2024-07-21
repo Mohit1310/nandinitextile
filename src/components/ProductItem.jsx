@@ -1,5 +1,5 @@
-import React from "react";
-import "./styles/ProductSection.css";
+import React from 'react';
+import './styles/ProductSection.css';
 
 const ProductItem = ({
   name,
@@ -13,10 +13,10 @@ const ProductItem = ({
       <div className="productItem--front">
         <img src={image} alt={name} />
         <div className="productItem--footer">
-          <h2>{name}</h2>
+          <h2 style={{ padding: '0rem' }}>{name}</h2>
         </div>
       </div>
-      {/* <div className="productItem--back">
+      <div className="productItem--back">
         <div className="productItem--backHeader">
           <p>{name}</p>
         </div>
@@ -25,16 +25,12 @@ const ProductItem = ({
           <p className="para">{availableGSM}</p>
           <hr />
           <h4>Available Colors</h4>
-          <p className="para">
-            {availableColors}
-          </p>
+          <p className="para">{availableColors}</p>
           <hr />
           <h4>Available Size</h4>
-          <p className="para">
-            {availableSize}
-          </p>
+          <p className="para">{availableSize}</p>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

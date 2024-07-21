@@ -1,9 +1,9 @@
-import { useState } from "react";
-import "./styles/Slider.css";
-import "./data/SliderData";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import { SliderData } from "./data/SliderData";
+import { useState } from 'react';
+import './styles/Slider.css';
+import './data/SliderData';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import { SliderData } from './data/SliderData';
 
 const Slider = () => {
   const [sliderDetail] = useState(SliderData);
@@ -30,15 +30,16 @@ const Slider = () => {
     <>
       <Carousel
         responsive={responsive}
-        showDots={true}
         removeArrowOnDeviceType={[
-          "tablet",
-          "mobile",
-          "desktop",
-          "superLargeDesktop",
+          'tablet',
+          'mobile',
+          'desktop',
+          'superLargeDesktop',
         ]}
-        // autoPlay={true}
+        autoPlay={true}
         infinite={true}
+        showDots
+        swipeable
       >
         {sliderDetail.map((value, index) => {
           return (
